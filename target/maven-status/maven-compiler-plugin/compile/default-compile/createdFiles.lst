@@ -1,0 +1,12 @@
+workflow\InferenceResult.class
+workflow\config\kafka\KafkaProcessor.class
+workflow\InferenceResultRepository.class
+workflow\InferenceResultController.class
+workflow\ProcessedData.class
+workflow\AbstractEvent.class
+workflow\ProcessedDataRepository.class
+workflow\InferenceRun.class
+workflow\DataPreprocessed.class
+workflow\ProcessedDataViewHandler.class
+workflow\PolicyHandler.class
+workflow\Application.class
