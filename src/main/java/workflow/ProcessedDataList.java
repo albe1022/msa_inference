@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="ProcessedData_table")
-public class ProcessedData {
+@Table(name="ProcessedDataList_table")
+public class ProcessedDataList {
 
         @Id
         @GeneratedValue(strategy=GenerationType.AUTO)

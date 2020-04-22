@@ -5,7 +5,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface ProcessedDataRepository extends CrudRepository<ProcessedData, Long> {
+public interface ProcessedDataListRepository extends CrudRepository<ProcessedDataList, Long> {
 
 
 }

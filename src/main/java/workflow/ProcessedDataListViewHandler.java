@@ -11,23 +11,23 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class ProcessedDataViewHandler {
+public class ProcessedDataListViewHandler {
 
 
     @Autowired
-    private ProcessedDataRepository processedDataRepository;
+    private ProcessedDataListRepository processedDataListRepository;
 
     @StreamListener(KafkaProcessor.INPUT)
     public void whenDataPreprocessed_then_CREATE_1 (@Payload DataPreprocessed dataPreprocessed) {
         try {
             if (dataPreprocessed.isMe()) {
                 // view 객체 생성
-                ProcessedData processedData = new ProcessedData();
+                ProcessedDataList processedDataList = new ProcessedDataList();
                 // view 객체에 이벤트의 Value 를 set 함
-                processedData.setId(dataPreprocessed.getId());
-                processedData.setDataType(dataPreprocessed.getDataType());
+                processedDataList.setId(dataPreprocessed.getId());
+                processedDataList.setDataType(dataPreprocessed.getDataType());
                 // view 레파지 토리에 save
-                processedDataRepository.save(processedData);
+                processedDataListRepository.save(processedDataList);
             }
         }catch (Exception e){
             e.printStackTrace();
